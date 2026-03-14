@@ -1,0 +1,37 @@
+
+:global(.myheader) {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(124, 22, 140);
+}
+
+.bigred {
+  color: Tomato;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.row2{
+    color: chocolate;
+}
+
+.mybutton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primary {
+  composes: mybutton;
+  background-color: #007bff;
+  color: white;
+}
+
+.secondary {
+  composes: mybutton;
+  background-color: #6c757d;
+  color: white;
+}

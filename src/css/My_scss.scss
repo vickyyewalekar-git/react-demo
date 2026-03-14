@@ -1,0 +1,15 @@
+@use 'sass:color';
+$headColor: red;
+
+.headColor {
+  color: $headColor;
+}
+
+
+.headColor-1 {
+  color: color.adjust($headColor, $lightness: -20%);
+}
+
+.headColor-2 {
+  color: color.adjust($headColor, $lightness: 20%);
+}
