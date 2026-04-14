@@ -13,8 +13,8 @@ function SearchResults({ number }) {
           </li>
         );
       } else {
-            items.push(<li key={i}>Result for {number} - {i}
-          </li>
+        items.push(<li key={i}>Result for {number} - {i}
+        </li>
         );
       }
     }
@@ -24,9 +24,9 @@ function SearchResults({ number }) {
 }
 
 
-  const MyInput = forwardRef((props, ref) => (
-    <input ref={ref} {...props} />
-  ));
+const MyInput = forwardRef((props, ref) => (
+  <input ref={ref} {...props} />
+));
 
 
 
@@ -61,42 +61,42 @@ function Transition() {
     inputRef.current.focus();
   };
 
-   const focusInput2 = () => {
+  const focusInput2 = () => {
     inputRef2.current.focus();
   };
 
   return (
     <div>
-      <div style={{width:'50%',float: 'left'}}>
-          <label>Enter Number:&nbsp;</label>
+      <div style={{ width: '50%', float: 'left' }}>
+        <label>Enter Number:&nbsp;</label>
 
-          <input
-            type="number"
-            value={input}
-            onChange={handleChange}
-            placeholder="Type number upto 1000 to search..."
-          />
+        <input
+          type="number"
+          value={input}
+          onChange={handleChange}
+          placeholder="Type number upto 1000 to search..."
+        />
 
-          {isPending && <p>Loading results...</p>}
+        {isPending && <p>Loading results...</p>}
 
-          {/* ✅ correct prop */}
-          <SearchResults number={query} />
+        {/* ✅ correct prop */}
+        <SearchResults number={query} />
       </div>
 
-      <div style={{width:'50%',float: 'left'}}>
-          <h4>React forwardRef</h4>
-          <div>
-            <MyInput ref={inputRef} placeholder="Type here..." />
-            <button onClick={focusInput}>Focus Input</button>
-          </div>
-          <br/>
-          <div>
-            <MyInput ref={inputRef2} placeholder="Type here..." />
-            <button onClick={focusInput2}>Focus Input</button>
-          </div>
+      <div style={{ width: '50%', float: 'left' }}>
+        <h4>React forwardRef</h4>
+        <div>
+          <MyInput ref={inputRef} placeholder="Type here..." />
+          <button onClick={focusInput}>Focus Input</button>
+        </div>
+        <br />
+        <div>
+          <MyInput ref={inputRef2} placeholder="Type here..." />
+          <button onClick={focusInput2}>Focus Input</button>
+        </div>
 
       </div>
-        
+
 
     </div>
   );

@@ -1,5 +1,4 @@
-
-import styles from '../css/my-style.module.css'; 
+import styles from '../../css/my-style.module.css'; 
 
 const myStyle = {
     color: "white",
