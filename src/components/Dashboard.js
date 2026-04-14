@@ -23,8 +23,8 @@ function Dashboard() {
 
   // ✅ FETCH ALL USERS (IMPORTANT CHANGE)
   useEffect(() => {
-    dispatch(fetchUsers({ page: 1, search: "", per_page: 1000 }));
-  }, [dispatch]);
+  dispatch(fetchUsers({ page: 1, search: "", per_page: 0 }));
+}, [dispatch]);
 
   // ✅ Active / Inactive
   const chartData = useMemo(() => {

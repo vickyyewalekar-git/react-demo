@@ -4,9 +4,11 @@ import api from "../../services/api";
 // 🔄 Fetch Users
 export const fetchUsers = createAsyncThunk(
   "users/fetchUsers",
-  async ({ page = 1, search = "" }, { rejectWithValue }) => {
+  async ({ page = 1, search = "", per_page = 10 }, { rejectWithValue }) => {
     try {
-      const res = await api.get(`/users?page=${page}&search=${search}`);
+      const res = await api.get(
+        `/users?page=${page}&search=${search}&per_page=${per_page}`
+      );
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || "Failed to fetch users");
